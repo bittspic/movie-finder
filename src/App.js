@@ -11,14 +11,12 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  async function fetchData() {
-    let resp = await fetch(FEATURED_API);
-    let data = await resp.json();
-    console.log(data);
-    setMovies(data.results);
-  }
-
   useEffect(() => {
+    async function fetchData() {
+      let resp = await fetch(FEATURED_API);
+      let data = await resp.json();
+      setMovies(data.results);
+    }
     fetchData();
   }, []);
 

@@ -13,6 +13,7 @@ body {
 .movie-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie {
@@ -76,4 +77,19 @@ header {
 
 .search:focus {
   outline: none;
+}
+
+.tag {
+  font-weight: bold;
+}
+
+.tag.green {
+  color: rgb(0, 255, 0);
+}
+
+.tag.orange {
+  color: orange;
+}
+.tag.red {
+  color: red;
 }
